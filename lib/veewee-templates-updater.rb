@@ -38,7 +38,7 @@ class VeeweeTemplatesUpdater
 
   def parse_archive res
     printf "Extracting: "
-    Zlib::GzipReader.open(res) do |tgz|
+    Zlib::GzipReader.open(res.path) do |tgz|
       last_entry_name = ""
       Archive::Tar::Minitar::Reader.open(tgz).each do |entry|
         # handle only templates
