@@ -2,4 +2,4 @@
 
 require 'veewee-templates-updater'
 
-VeeweeTemplatesUpdater.new.run
+VeeweeTemplatesUpdater.new.run ARGV

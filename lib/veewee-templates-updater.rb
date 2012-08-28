@@ -20,8 +20,12 @@ class VeeweeTemplatesUpdater
     File.join(veewee_spec.full_gem_path,source)
   end
 
+  def user
+    @user ||= "jedi4ever"
+  end
+
   def veewee_tarball_url
-    "https://github.com/jedi4ever/veewee/tarball/master"
+    "https://github.com/#{user}/veewee/tarball/master"
   end
 
   def handle_entry(entry)
@@ -53,8 +57,9 @@ class VeeweeTemplatesUpdater
     printf "\n"
   end
 
-  def run
+  def run args
     veewee_spec || raise("Could not find veewee gem, install it first.")
+    @user = args[0] if args.length > 0
     puts "Veewee: #{veewee_spec.full_gem_path}"
     puts "Downloading: #{veewee_tarball_url}"
     open(veewee_tarball_url) do |res|

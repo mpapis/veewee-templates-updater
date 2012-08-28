@@ -10,7 +10,9 @@ Easily update templates in the installed veewee gem.
 
 ## Usage
 
-    veewee-templates-update
+    veewee-templates-update {owner}
+
+- `{owner}` - optional owner of the `veewee` repository, by default `jedi4ever`.
 
 ## Uninstallation
 

@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "veewee-templates-updater"
-  s.version     = "1.0.0"
+  s.version     = "1.1.0"
   s.author      = "Michal Papis"
   s.email       = "mpapis@gmail.com"
   s.homepage    = "https://github.com/mpapis/veewee-templates-updater"
